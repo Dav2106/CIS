@@ -108,8 +108,8 @@ _actualizadoPor varchar(100), _isActive int
 BEGIN
 INSERT INTO CategoriaProveedor (nombre, descripcion, fechaCreacion, creadoPor, fechaActualizacion, actualizadoPor, isActive)
 VALUES (_nombre, _descripcion, _fechaCreacion, _creadoPor, _fechaActualizacion, _actualizadoPor, _isActive);
-END $$
-DELIMITER 
+END 
+$$ 
 
 DELIMITER $$
 CREATE PROCEDURE UpdateCategoriaProveedor(
@@ -122,8 +122,8 @@ UPDATE CategoriaProveedor SET nombre = _nombre,
                               actualizadoPor = _actualizadoPor,
                               isActive = _isActive
 WHERE id = _id;
-END $$
-DELIMITER 
+END 
+$$ 
 
 DELIMITER $$
 CREATE PROCEDURE GetCategoriaProveedor(
@@ -132,14 +132,15 @@ _id int
 BEGIN
 SELECT id, nombre, descripcion, fechaCreacion, creadoPor, fechaActualizacion, actualizadoPor, isActive FROM CategoriaProveedor 
 WHERE id = _id;
-END $$
-DELIMITER 
-
-CREATE PROCEDURE GetCategoriasProveedor
+END 
+$$
+ 
+DELIMITER $$
+CREATE PROCEDURE GetCategoriasProveedor()
 BEGIN
-SELECT id, nombre, descripcion, fechaCreacion, creadoPor, fechaActualizacion, actualizadoPor, isActive FROM CategoriaProveedor 
-END $$
-DELIMITER 
+SELECT id, nombre, descripcion, fechaCreacion, creadoPor, fechaActualizacion, actualizadoPor, isActive FROM CategoriaProveedor; 
+END 
+$$ 
 /*----------------------------------------------Catregoria Proveedor---------------------------------------------------------*/
 /*----------------------------------------------Catregoria Producto---------------------------------------------------------*/
 DELIMITER $$
@@ -150,8 +151,8 @@ _actualizadoPor varchar(100), _isActive int
 BEGIN
 INSERT INTO CategoriaProducto (nombre, descripcion, fechaCreacion, creadoPor, fechaActualizacion, actualizadoPor, isActive)
 VALUES (_nombre, _descripcion, _fechaCreacion, _creadoPor, _fechaActualizacion, _actualizadoPor, _isActive);
-END $$
-DELIMITER 
+END 
+$$ 
 
 DELIMITER $$
 CREATE PROCEDURE UpdateCategoriaProducto(
@@ -164,8 +165,8 @@ UPDATE CategoriaProducto SET nombre = _nombre,
                               actualizadoPor = _actualizadoPor,
                               isActive = _isActive
 WHERE id = _id;
-END $$
-DELIMITER 
+END 
+$$ 
 
 DELIMITER $$
 CREATE PROCEDURE GetCategoriaProducto(
@@ -174,14 +175,15 @@ _id int
 BEGIN
 SELECT id, nombre, descripcion, fechaCreacion, creadoPor, fechaActualizacion, actualizadoPor, isActive FROM CategoriaProducto 
 WHERE id = _id;
-END $$
-DELIMITER 
+END 
+$$
 
-CREATE PROCEDURE GetCategoriasProducto
+DELIMITER $$
+CREATE PROCEDURE GetCategoriasProducto()
 BEGIN
-SELECT id, nombre, descripcion, fechaCreacion, creadoPor, fechaActualizacion, actualizadoPor, isActive FROM CategoriaProducto 
-END $$
-DELIMITER 
+SELECT id, nombre, descripcion, fechaCreacion, creadoPor, fechaActualizacion, actualizadoPor, isActive FROM CategoriaProducto;
+END 
+$$ 
 /*----------------------------------------------Catregoria Producto---------------------------------------------------------*/
 /*----------------------------------------------------Proveedor------------------------------------------------------------*/
 DELIMITER $$
@@ -192,8 +194,8 @@ _fechaCreacion datetime, _creadoPor varchar(100), _fechaActualizacion datetime, 
 BEGIN
 INSERT INTO Proveedor (nombre, descripcion, direccion, telefono, mail, idCateProve, fechaCreacion, creadoPor, fechaActualizacion, actualizadoPor, isActive)
 VALUES (_nombre, _descripcion, _direccion, _telefono, _mail, _idCateProve, _fechaCreacion, _creadoPor, _fechaActualizacion, _actualizadoPor, _isActive);
-END $$
-DELIMITER 
+END 
+$$ 
 
 DELIMITER $$
 CREATE PROCEDURE UpdateProveedor(
@@ -209,8 +211,8 @@ UPDATE Proveedor SET nombre = _nombre,
                      actualizadoPor = _actualizadoPor,
                      isActive = _isActive
 WHERE id = _id;
-END $$
-DELIMITER 
+END 
+$$ 
 
 DELIMITER $$
 CREATE PROCEDURE GetProveedor(
@@ -219,14 +221,15 @@ _id int
 BEGIN
 SELECT id, nombre, descripcion, direccion, telefono, mail, idCateProve, fechaCreacion, creadoPor, fechaActualizacion, actualizadoPor, isActive FROM Proveedor 
 WHERE id = _id;
-END $$
-DELIMITER 
+END 
+$$ 
 
-CREATE PROCEDURE GetProveedores
+DELIMITER $$
+CREATE PROCEDURE GetProveedores()
 BEGIN
-SELECT id, nombre, descripcion, direccion, telefono, mail, idCateProve, fechaCreacion, creadoPor, fechaActualizacion, actualizadoPor, isActive FROM Proveedor 
-END $$
-DELIMITER 
+SELECT id, nombre, descripcion, direccion, telefono, mail, idCateProve, fechaCreacion, creadoPor, fechaActualizacion, actualizadoPor, isActive FROM Proveedor ;
+END 
+$$ 
 /*---------------------------------------------------------Proveedor------------------------------------------------------------*/
 /*----------------------------------------------------Producto------------------------------------------------------------*/
 DELIMITER $$
@@ -237,8 +240,8 @@ _fechaCreacion datetime, _creadoPor varchar(100), _fechaActualizacion datetime, 
 BEGIN
 INSERT INTO Producto (nombre, descripcion, precio, stock, idProve, idCateProd, fechaCreacion, creadoPor, fechaActualizacion, actualizadoPor, isActive)
 VALUES (_nombre, _descripcion, _precio, _stock, _idProve, _idCateProd, _fechaCreacion, _creadoPor, _fechaActualizacion, _actualizadoPor, _isActive);
-END $$
-DELIMITER 
+END 
+$$ 
 
 DELIMITER $$
 CREATE PROCEDURE UpdateProducto(
@@ -255,8 +258,8 @@ UPDATE Proveedor SET nombre = _nombre,
                      actualizadoPor = _actualizadoPor,
                      isActive = _isActive
 WHERE id = _id;
-END $$
-DELIMITER 
+END 
+$$ 
 
 DELIMITER $$
 CREATE PROCEDURE GetProducto(
@@ -265,14 +268,15 @@ _id int
 BEGIN
 SELECT id, nombre, descripcion, precio, stock, idProve, idCateProd, fechaCreacion, creadoPor, fechaActualizacion, actualizadoPor, isActive FROM Producto 
 WHERE id = _id;
-END $$
-DELIMITER 
+END 
+$$ 
 
-CREATE PROCEDURE GetProductos
+DELIMITER $$
+CREATE PROCEDURE GetProductos()
 BEGIN
-SELECT id, nombre, descripcion, precio, stock, idProve, idCateProd, fechaCreacion, creadoPor, fechaActualizacion, actualizadoPor, isActive FROM Producto 
-END $$
-DELIMITER 
+SELECT id, nombre, descripcion, precio, stock, idProve, idCateProd, fechaCreacion, creadoPor, fechaActualizacion, actualizadoPor, isActive FROM Producto ;
+END 
+$$ 
 /*---------------------------------------------------------Producto------------------------------------------------------------*/
 /*----------------------------------------------------Detalle Factura------------------------------------------------------------*/
 DELIMITER $$
@@ -283,8 +287,8 @@ _actualizadoPor varchar(100)
 BEGIN
 INSERT INTO DetalleFactura (transaccion, idProducto, cantidad, fechaCreacion, creadoPor, fechaActualizacion, actualizadoPor)
 VALUES (_transaccion, _idProducto, _cantidad, _fechaCreacion, _creadoPor, _fechaActualizacion, _actualizadoPor);
-END $$
-DELIMITER 
+END 
+$$ 
 
 DELIMITER $$
 CREATE PROCEDURE UpdateDetalleFactura(
@@ -296,8 +300,8 @@ UPDATE DetalleFactura SET transaccion = _transaccion,
                      fechaActualizacion = _fechaActualizacion, 
                      actualizadoPor = _actualizadoPor
 WHERE id = _id;
-END $$
-DELIMITER 
+END 
+$$ 
 
 DELIMITER $$
 CREATE PROCEDURE GetDetalleFactura(
@@ -306,14 +310,15 @@ _id int
 BEGIN
 SELECT id, transaccion, idProducto, cantidad, fechaCreacion, creadoPor, fechaActualizacion, actualizadoPor FROM DetalleFactura
 WHERE id = _id;
-END $$
-DELIMITER 
+END 
+$$ 
 
-CREATE PROCEDURE GetDetallesFactura
+DELIMITER $$
+CREATE PROCEDURE GetDetallesFactura()
 BEGIN
-SELECT SELECT id, transaccion, idProducto, cantidad, fechaCreacion, creadoPor, fechaActualizacion, actualizadoPor FROM DetalleFactura
-END $$
-DELIMITER 
+SELECT id, transaccion, idProducto, cantidad, fechaCreacion, creadoPor, fechaActualizacion, actualizadoPor FROM DetalleFactura;
+END 
+$$ 
 /*---------------------------------------------------------Detalle Factura------------------------------------------------------------*/
 /*-------------------------------------------------------------Factura---------------------------------------------------------------*/
 DELIMITER $$
@@ -324,8 +329,8 @@ _fechaActualizacion datetime, _actualizadoPor varchar(100)
 BEGIN
 INSERT INTO Factura (total, cliente, idDetaFact, tipoPago, fechaCreacion, creadoPor, fechaActualizacion, actualizadoPor)
 VALUES (_total, _cliente, _idDetaFact, _tipoPago, _fechaCreacion, _creadoPor, _fechaActualizacion, _actualizadoPor);
-END $$
-DELIMITER 
+END 
+$$ 
 
 DELIMITER $$
 CREATE PROCEDURE UpdateFactura(
@@ -338,8 +343,8 @@ UPDATE Factura SET total = _total,
                      fechaActualizacion = _fechaActualizacion, 
                      actualizadoPor = _actualizadoPor
 WHERE id = _id;
-END $$
-DELIMITER 
+END 
+$$ 
 
 DELIMITER $$
 CREATE PROCEDURE GetFactura(
@@ -348,14 +353,15 @@ _id int
 BEGIN
 SELECT id, total, cliente, idDetaFact, tipoPago, fechaCreacion, creadoPor, fechaActualizacion, actualizadoPor FROM Factura
 WHERE id = _id;
-END $$
-DELIMITER 
+END 
+$$ 
 
-CREATE PROCEDURE GetFacturas
+DELIMITER $$
+CREATE PROCEDURE GetFacturas()
 BEGIN
-SELECT id, total, cliente, idDetaFact, tipoPago, fechaCreacion, creadoPor, fechaActualizacion, actualizadoPor FROM Factura
-END $$
-DELIMITER 
+SELECT id, total, cliente, idDetaFact, tipoPago, fechaCreacion, creadoPor, fechaActualizacion, actualizadoPor FROM Factura;
+END 
+$$ 
 /*-------------------------------------------------------------Factura----------------------------------------------------------------*/
 /*-------------------------------------------------------------Usuarios---------------------------------------------------------------*/
 DELIMITER $$
@@ -366,8 +372,8 @@ _fechaActualizacion datetime, _actualizadoPor varchar(100)
 BEGIN
 INSERT INTO Usuario (nombre, username, password, isAdmin, isActive, fechaCreacion, creadoPor, fechaActualizacion, actualizadoPor)
 VALUES (_nombre, _username, _password, _isAdmin, _isActive, _fechaCreacion, _creadoPor, _fechaActualizacion, _actualizadoPor);
-END $$
-DELIMITER 
+END 
+$$ 
 
 DELIMITER $$
 CREATE PROCEDURE UpdateUsuario(
@@ -383,8 +389,8 @@ UPDATE Usuario SET nombre = _nombre,
                      fechaActualizacion = _fechaActualizacion, 
                      actualizadoPor = _actualizadoPor
 WHERE id = _id;
-END $$
-DELIMITER 
+END 
+$$ 
 
 DELIMITER $$
 CREATE PROCEDURE GetUsuario(
@@ -393,13 +399,15 @@ _id int
 BEGIN
 SELECT id, nombre, username, password, isAdmin, isActive, fechaCreacion, creadoPor, fechaActualizacion, actualizadoPor FROM Usuario
 WHERE id = _id;
-END $$
-DELIMITER 
+END 
+$$
 
-CREATE PROCEDURE GetFacturas
+DELIMITER $$
+CREATE PROCEDURE GetUsuarios()
 BEGIN
-SELECT id, nombre, username, password, isAdmin, isActive, fechaCreacion, creadoPor, fechaActualizacion, actualizadoPor FROM Usuario
-END $$
-DELIMITER 
+SELECT id, nombre, username, password, isAdmin, isActive, fechaCreacion, creadoPor, fechaActualizacion, actualizadoPor FROM Usuario;
+END 
+$$ 
 /*-------------------------------------------------------------Usuarios----------------------------------------------------------------*/
 /*CREATE PROCEDURES*/
+
