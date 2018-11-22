@@ -84,7 +84,7 @@ actualizadoPor varchar(100) not null,
 foreign key (idDetaFact) references DetalleFactura (id)
 );
 
-CREATE TABLE Usuarios(
+CREATE TABLE Usuario(
 id int primary key auto_increment not null,
 nombre varchar(200) not null,
 username varchar(100) not null,
@@ -282,7 +282,7 @@ _actualizadoPor varchar(100)
 )
 BEGIN
 INSERT INTO DetalleFactura (transaccion, idProducto, cantidad, fechaCreacion, creadoPor, fechaActualizacion, actualizadoPor)
-VALUES (_transaccion, _idProducto, _cantidad, _fechaCreacion, _creadoPor, _fechaActualizacion, _actualizadoPor, _isActive);
+VALUES (_transaccion, _idProducto, _cantidad, _fechaCreacion, _creadoPor, _fechaActualizacion, _actualizadoPor);
 END $$
 DELIMITER 
 
@@ -294,8 +294,7 @@ UPDATE DetalleFactura SET transaccion = _transaccion,
 					 idProducto = _idProducto, 
                      cantidad = _cantidad,
                      fechaActualizacion = _fechaActualizacion, 
-                     actualizadoPor = _actualizadoPor,
-                     isActive = _isActive
+                     actualizadoPor = _actualizadoPor
 WHERE id = _id;
 END $$
 DELIMITER 
@@ -316,4 +315,91 @@ SELECT SELECT id, transaccion, idProducto, cantidad, fechaCreacion, creadoPor, f
 END $$
 DELIMITER 
 /*---------------------------------------------------------Detalle Factura------------------------------------------------------------*/
+/*-------------------------------------------------------------Factura---------------------------------------------------------------*/
+DELIMITER $$
+CREATE PROCEDURE InsertFactura(
+_total float, _cliente varchar(100), _idDetaFact int, _tipoPago varchar(100), _fechaCreacion datetime, _creadoPor varchar(100), 
+_fechaActualizacion datetime, _actualizadoPor varchar(100)
+)
+BEGIN
+INSERT INTO Factura (total, cliente, idDetaFact, tipoPago, fechaCreacion, creadoPor, fechaActualizacion, actualizadoPor)
+VALUES (_total, _cliente, _idDetaFact, _tipoPago, _fechaCreacion, _creadoPor, _fechaActualizacion, _actualizadoPor);
+END $$
+DELIMITER 
+
+DELIMITER $$
+CREATE PROCEDURE UpdateFactura(
+_id int, _total float, _cliente varchar(100), _idDetaFact int, _tipoPago varchar(100), _fechaActualizacion datetime, _actualizadoPor varchar(100))
+BEGIN
+UPDATE Factura SET total = _total, 
+					 cliente = _cliente, 
+                     idDetaFact = _idDetaFact,
+                     tipoPago = _tipoPago,
+                     fechaActualizacion = _fechaActualizacion, 
+                     actualizadoPor = _actualizadoPor
+WHERE id = _id;
+END $$
+DELIMITER 
+
+DELIMITER $$
+CREATE PROCEDURE GetFactura(
+_id int
+)
+BEGIN
+SELECT id, total, cliente, idDetaFact, tipoPago, fechaCreacion, creadoPor, fechaActualizacion, actualizadoPor FROM Factura
+WHERE id = _id;
+END $$
+DELIMITER 
+
+CREATE PROCEDURE GetFacturas
+BEGIN
+SELECT id, total, cliente, idDetaFact, tipoPago, fechaCreacion, creadoPor, fechaActualizacion, actualizadoPor FROM Factura
+END $$
+DELIMITER 
+/*-------------------------------------------------------------Factura----------------------------------------------------------------*/
+/*-------------------------------------------------------------Usuarios---------------------------------------------------------------*/
+DELIMITER $$
+CREATE PROCEDURE InsertUsuario(
+_nombre varchar(200), _username varchar(100), _password varchar(100), _isAdmin int, _isActive int, _fechaCreacion datetime, _creadoPor varchar(100), 
+_fechaActualizacion datetime, _actualizadoPor varchar(100)
+)
+BEGIN
+INSERT INTO Usuario (nombre, username, password, isAdmin, isActive, fechaCreacion, creadoPor, fechaActualizacion, actualizadoPor)
+VALUES (_nombre, _username, _password, _isAdmin, _isActive, _fechaCreacion, _creadoPor, _fechaActualizacion, _actualizadoPor);
+END $$
+DELIMITER 
+
+DELIMITER $$
+CREATE PROCEDURE UpdateUsuario(
+_id int, _nombre varchar(200), _username varchar(100), _password varchar(100), _isAdmin int, _isActive int, 
+_fechaActualizacion datetime, _actualizadoPor varchar(100)
+)
+BEGIN
+UPDATE Usuario SET nombre = _nombre, 
+					 username = _username, 
+                     password = _password,
+                     isAdmin = _isAdmin,
+                     isActive = _isActive,
+                     fechaActualizacion = _fechaActualizacion, 
+                     actualizadoPor = _actualizadoPor
+WHERE id = _id;
+END $$
+DELIMITER 
+
+DELIMITER $$
+CREATE PROCEDURE GetUsuario(
+_id int
+)
+BEGIN
+SELECT id, nombre, username, password, isAdmin, isActive, fechaCreacion, creadoPor, fechaActualizacion, actualizadoPor FROM Usuario
+WHERE id = _id;
+END $$
+DELIMITER 
+
+CREATE PROCEDURE GetFacturas
+BEGIN
+SELECT id, nombre, username, password, isAdmin, isActive, fechaCreacion, creadoPor, fechaActualizacion, actualizadoPor FROM Usuario
+END $$
+DELIMITER 
+/*-------------------------------------------------------------Usuarios----------------------------------------------------------------*/
 /*CREATE PROCEDURES*/
