@@ -15,17 +15,6 @@ actualizadoPor varchar(100) not null,
 isActive int not null
 );
 
-CREATE TABLE CategoriaProducto(
-id int primary key auto_increment not null,
-nombre varchar(100) not null,
-descripcion varchar(300) null,
-fechaCreacion datetime not null,
-creadoPor varchar(100) not null,
-fechaActualizacion datetime not null,
-actualizadoPor varchar(100) not null,
-isActive int not null
-);
-
 CREATE TABLE Proveedor(
 id int primary key auto_increment not null,
 nombre varchar(100) not null,
@@ -42,20 +31,31 @@ isActive int not null,
 foreign key (idCateProve) references CategoriaProveedor (id)
 );
 
+CREATE TABLE CategoriaProducto(
+id int primary key auto_increment not null,
+nombre varchar(100) not null,
+descripcion varchar(300) null,
+fechaCreacion datetime not null,
+creadoPor varchar(100) not null,
+fechaActualizacion datetime not null,
+actualizadoPor varchar(100) not null,
+isActive int not null
+);
+
 CREATE TABLE Producto(
 id int primary key auto_increment not null,
 nombre varchar(100) not null,
 descripcion varchar(300) null,
 precio float not null,
 stock int not null,
-idProve int not null,
 idCateProd int not null ,
 fechaCreacion datetime not null,
 creadoPor varchar(100) not null,
 fechaActualizacion datetime not null,
 actualizadoPor varchar(100) not null,
 isActive int not null,
-foreign key (idProve) references Proveedor (id),
+idProveedor int not null,
+foreign key (idProveedor) references Proveedor (id),
 foreign key (idCateProd) references CategoriaProducto (id)
 );
 
@@ -95,6 +95,22 @@ fechaCreacion datetime not null,
 creadoPor varchar(100) not null,
 fechaActualizacion datetime not null,
 actualizadoPor varchar(100) not null
+);
+
+CREATE TABLE Cronograma(
+id int primary key auto_increment not null,
+fechaRecibo datetime not null,
+idProd int not null,
+idProve int not null,
+cantidad int not null,
+pago float not null,
+isActive int not null,
+fechaCreacion datetime not null,
+creadoPor varchar(100) not null,
+fechaActualizacion datetime not null,
+actualizadoPor varchar(100) not null,
+foreign key (idProve) references Proveedor (id),
+foreign key (idProd) references Producto (id)
 );
 /*CREATE TABLES*/
 
@@ -142,49 +158,6 @@ SELECT id, nombre, descripcion, fechaCreacion, creadoPor, fechaActualizacion, ac
 END 
 $$ 
 /*----------------------------------------------Catregoria Proveedor---------------------------------------------------------*/
-/*----------------------------------------------Catregoria Producto---------------------------------------------------------*/
-DELIMITER $$
-CREATE PROCEDURE InsertCategoriaProducto(
-_nombre varchar(100), _descripcion varchar(300), _fechaCreacion datetime, _creadoPor varchar(100), _fechaActualizacion datetime, 
-_actualizadoPor varchar(100), _isActive int
-)
-BEGIN
-INSERT INTO CategoriaProducto (nombre, descripcion, fechaCreacion, creadoPor, fechaActualizacion, actualizadoPor, isActive)
-VALUES (_nombre, _descripcion, _fechaCreacion, _creadoPor, _fechaActualizacion, _actualizadoPor, _isActive);
-END 
-$$ 
-
-DELIMITER $$
-CREATE PROCEDURE UpdateCategoriaProducto(
-_id int, _nombre varchar(100), _descripcion varchar(300), _fechaActualizacion datetime, _actualizadoPor varchar(100), _isActive int
-)
-BEGIN
-UPDATE CategoriaProducto SET nombre = _nombre, 
-							  descripcion = _descripcion, 
-                              fechaActualizacion = _fechaActualizacion, 
-                              actualizadoPor = _actualizadoPor,
-                              isActive = _isActive
-WHERE id = _id;
-END 
-$$ 
-
-DELIMITER $$
-CREATE PROCEDURE GetCategoriaProducto(
-_id int
-)
-BEGIN
-SELECT id, nombre, descripcion, fechaCreacion, creadoPor, fechaActualizacion, actualizadoPor, isActive FROM CategoriaProducto 
-WHERE id = _id;
-END 
-$$
-
-DELIMITER $$
-CREATE PROCEDURE GetCategoriasProducto()
-BEGIN
-SELECT id, nombre, descripcion, fechaCreacion, creadoPor, fechaActualizacion, actualizadoPor, isActive FROM CategoriaProducto;
-END 
-$$ 
-/*----------------------------------------------Catregoria Producto---------------------------------------------------------*/
 /*----------------------------------------------------Proveedor------------------------------------------------------------*/
 DELIMITER $$
 CREATE PROCEDURE InsertProveedor(
@@ -231,6 +204,49 @@ SELECT id, nombre, descripcion, direccion, telefono, mail, idCateProve, fechaCre
 END 
 $$ 
 /*---------------------------------------------------------Proveedor------------------------------------------------------------*/
+/*----------------------------------------------Catregoria Producto---------------------------------------------------------*/
+DELIMITER $$
+CREATE PROCEDURE InsertCategoriaProducto(
+_nombre varchar(100), _descripcion varchar(300), _fechaCreacion datetime, _creadoPor varchar(100), _fechaActualizacion datetime, 
+_actualizadoPor varchar(100), _isActive int
+)
+BEGIN
+INSERT INTO CategoriaProducto (nombre, descripcion, fechaCreacion, creadoPor, fechaActualizacion, actualizadoPor, isActive)
+VALUES (_nombre, _descripcion, _fechaCreacion, _creadoPor, _fechaActualizacion, _actualizadoPor, _isActive);
+END 
+$$ 
+
+DELIMITER $$
+CREATE PROCEDURE UpdateCategoriaProducto(
+_id int, _nombre varchar(100), _descripcion varchar(300), _fechaActualizacion datetime, _actualizadoPor varchar(100), _isActive int, 
+_idProveedor int)
+BEGIN
+UPDATE CategoriaProducto SET nombre = _nombre, 
+							  descripcion = _descripcion, 
+                              fechaActualizacion = _fechaActualizacion, 
+                              actualizadoPor = _actualizadoPor,
+                              isActive = _isActive
+WHERE id = _id;
+END 
+$$ 
+
+DELIMITER $$
+CREATE PROCEDURE GetCategoriaProducto(
+_id int
+)
+BEGIN
+SELECT id, nombre, descripcion, fechaCreacion, creadoPor, fechaActualizacion, actualizadoPor, isActive FROM CategoriaProducto 
+WHERE id = _id;
+END 
+$$
+
+DELIMITER $$
+CREATE PROCEDURE GetCategoriasProducto()
+BEGIN
+SELECT id, nombre, descripcion, fechaCreacion, creadoPor, fechaActualizacion, actualizadoPor, isActive FROM CategoriaProducto;
+END 
+$$ 
+/*----------------------------------------------Catregoria Producto---------------------------------------------------------*/
 /*----------------------------------------------------Producto------------------------------------------------------------*/
 DELIMITER $$
 CREATE PROCEDURE InsertProducto(
@@ -409,5 +425,52 @@ SELECT id, nombre, username, password, isAdmin, isActive, fechaCreacion, creadoP
 END 
 $$ 
 /*-------------------------------------------------------------Usuarios----------------------------------------------------------------*/
+/*------------------------------------------------------------Cronograma---------------------------------------------------------------*/
+DELIMITER $$
+CREATE PROCEDURE InsertCronograma(
+_fechaRecibo datetime, _idProd int, _idProve int, _cantidad int, _pago float, _isActive int, _fechaCreacion datetime, _creadoPor varchar(100), 
+_fechaActualizacion datetime, _actualizadoPor varchar(100)
+)
+BEGIN
+INSERT INTO Cronograma (fechaRecibido, idProd, idProve, cantidad, pago, isActive, fechaCreacion, creadoPor, fechaActualizacion, actualizadoPor)
+VALUES (_fechaRecibido, _idProd, _idProve, _cantidad, _pago, _isActive, _fechaCreacion, _creadoPor, _fechaActualizacion, _actualizadoPor);
+END 
+$$ 
+
+DELIMITER $$
+CREATE PROCEDURE UpdateCronograma(
+_id int, _fechaRecibo datetime, _idProd int, _idProve int, _cantidad int, _pago float, _isActive int,
+_fechaActualizacion datetime, _actualizadoPor varchar(100)
+)
+BEGIN
+UPDATE Cronograma SET fechaRecibo = _fechaRecibo, 
+					 idProd = _idProd, 
+                     idProve = _idProve,
+                     cantidad = _cantidad,
+                     pago = _pago,
+                     isActive = _isActive,
+                     fechaActualizacion = _fechaActualizacion, 
+                     actualizadoPor = _actualizadoPor
+WHERE id = _id;
+END 
+$$ 
+
+DELIMITER $$
+CREATE PROCEDURE GetCronograma(
+_id int
+)
+BEGIN
+SELECT id, fechaRecibido, idProd, idProve, cantidad, pago, isActive, fechaCreacion, creadoPor, fechaActualizacion, actualizadoPor FROM Cronograma
+WHERE id = _id;
+END 
+$$
+
+DELIMITER $$
+CREATE PROCEDURE GetCronogramas()
+BEGIN
+SELECT id, fechaRecibido, idProd, idProve, cantidad, pago, isActive, fechaCreacion, creadoPor, fechaActualizacion, actualizadoPor FROM Cronograma;
+END 
+$$ 
+/*------------------------------------------------------------Cronograma---------------------------------------------------------------*/
 /*CREATE PROCEDURES*/
 
