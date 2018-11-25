@@ -112,6 +112,14 @@ actualizadoPor varchar(100) not null,
 foreign key (idProve) references Proveedor (id),
 foreign key (idProd) references Producto (id)
 );
+
+CREATE TABLE Logs(
+id int primary key auto_increment not null,
+exception nvarchar(10000) not null,
+method varchar(500) not null,
+usuario varchar(100) not null,
+fecha datetime not null
+);
 /*CREATE TABLES*/
 
 /*CREATE PROCEDURES*/
@@ -472,5 +480,14 @@ SELECT id, fechaRecibido, idProd, idProve, cantidad, pago, isActive, fechaCreaci
 END 
 $$ 
 /*------------------------------------------------------------Cronograma---------------------------------------------------------------*/
+/*---------------------------------------------------------------Logs------------------------------------------------------------------*/
+DELIMITER $$
+CREATE PROCEDURE InsertLog(exception nvarchar(10000), method varchar(500), usuario varchar(100), fecha datetime)
+BEGIN
+INSERT INTO Logs (exception, method, usuario, fecha)
+VALUES(_exception, _method, _usuario, _fecha);
+END
+$$
+/*---------------------------------------------------------------Logs------------------------------------------------------------------*/
 /*CREATE PROCEDURES*/
 
