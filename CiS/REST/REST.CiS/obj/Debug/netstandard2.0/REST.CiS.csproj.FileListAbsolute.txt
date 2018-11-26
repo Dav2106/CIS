@@ -1,0 +1,9 @@
+D:\CIS\CiS\REST\REST.CiS\bin\Debug\netstandard2.0\REST.CiS.deps.json
+D:\CIS\CiS\REST\REST.CiS\bin\Debug\netstandard2.0\REST.CiS.dll
+D:\CIS\CiS\REST\REST.CiS\bin\Debug\netstandard2.0\REST.CiS.pdb
+D:\CIS\CiS\REST\REST.CiS\obj\Debug\netstandard2.0\REST.CiS.csprojAssemblyReference.cache
+D:\CIS\CiS\REST\REST.CiS\obj\Debug\netstandard2.0\REST.CiS.csproj.CoreCompileInputs.cache
+D:\CIS\CiS\REST\REST.CiS\obj\Debug\netstandard2.0\REST.CiS.AssemblyInfoInputs.cache
+D:\CIS\CiS\REST\REST.CiS\obj\Debug\netstandard2.0\REST.CiS.AssemblyInfo.cs
+D:\CIS\CiS\REST\REST.CiS\obj\Debug\netstandard2.0\REST.CiS.dll
+D:\CIS\CiS\REST\REST.CiS\obj\Debug\netstandard2.0\REST.CiS.pdb

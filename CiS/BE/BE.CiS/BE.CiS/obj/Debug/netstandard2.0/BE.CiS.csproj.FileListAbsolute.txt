@@ -6,3 +6,4 @@ D:\CIS\CiS\BE\BE.CiS\BE.CiS\obj\Debug\netstandard2.0\BE.CiS.AssemblyInfoInputs.c
 D:\CIS\CiS\BE\BE.CiS\BE.CiS\obj\Debug\netstandard2.0\BE.CiS.AssemblyInfo.cs
 D:\CIS\CiS\BE\BE.CiS\BE.CiS\obj\Debug\netstandard2.0\BE.CiS.dll
 D:\CIS\CiS\BE\BE.CiS\BE.CiS\obj\Debug\netstandard2.0\BE.CiS.pdb
+D:\CIS\CiS\BE\BE.CiS\BE.CiS\obj\Debug\netstandard2.0\BE.CiS.csprojAssemblyReference.cache

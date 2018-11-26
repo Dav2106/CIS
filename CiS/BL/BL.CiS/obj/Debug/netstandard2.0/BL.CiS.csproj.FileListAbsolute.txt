@@ -1,0 +1,17 @@
+D:\CIS\CiS\BL\BL.CiS\bin\Debug\netstandard2.0\BL.CiS.deps.json
+D:\CIS\CiS\BL\BL.CiS\bin\Debug\netstandard2.0\BL.CiS.dll
+D:\CIS\CiS\BL\BL.CiS\bin\Debug\netstandard2.0\BL.CiS.pdb
+D:\CIS\CiS\BL\BL.CiS\bin\Debug\netstandard2.0\BE.CiS.dll
+D:\CIS\CiS\BL\BL.CiS\bin\Debug\netstandard2.0\DAC.CiS.dll
+D:\CIS\CiS\BL\BL.CiS\bin\Debug\netstandard2.0\Logger.CiS.dll
+D:\CIS\CiS\BL\BL.CiS\bin\Debug\netstandard2.0\MySql.Data.dll
+D:\CIS\CiS\BL\BL.CiS\bin\Debug\netstandard2.0\BE.CiS.pdb
+D:\CIS\CiS\BL\BL.CiS\bin\Debug\netstandard2.0\DAC.CiS.pdb
+D:\CIS\CiS\BL\BL.CiS\bin\Debug\netstandard2.0\Logger.CiS.pdb
+D:\CIS\CiS\BL\BL.CiS\obj\Debug\netstandard2.0\BL.CiS.csprojAssemblyReference.cache
+D:\CIS\CiS\BL\BL.CiS\obj\Debug\netstandard2.0\BL.CiS.csproj.CoreCompileInputs.cache
+D:\CIS\CiS\BL\BL.CiS\obj\Debug\netstandard2.0\BL.CiS.AssemblyInfoInputs.cache
+D:\CIS\CiS\BL\BL.CiS\obj\Debug\netstandard2.0\BL.CiS.AssemblyInfo.cs
+D:\CIS\CiS\BL\BL.CiS\obj\Debug\netstandard2.0\BL.CiS.csproj.CopyComplete
+D:\CIS\CiS\BL\BL.CiS\obj\Debug\netstandard2.0\BL.CiS.dll
+D:\CIS\CiS\BL\BL.CiS\obj\Debug\netstandard2.0\BL.CiS.pdb

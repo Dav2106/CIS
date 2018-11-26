@@ -1,0 +1,13 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\BE\BE.CiS\BE.CiS\BE.CiS.csproj" />
+    <ProjectReference Include="..\..\DAC\DAC.CiS\DAC.CiS.csproj" />
+    <ProjectReference Include="..\..\Logger\Logger.CiS\Logger.CiS.csproj" />
+  </ItemGroup>
+
+</Project>
