@@ -2,7 +2,7 @@
 
 namespace BL.CiS
 {
-    public class CategoriaProductoBL
+    public class categoriaProveedorBL
     {
     }
 }

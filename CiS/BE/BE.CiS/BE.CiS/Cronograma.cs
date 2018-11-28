@@ -11,7 +11,7 @@ namespace BE.CiS
         public int IdProd { get; set; }
         public int IdProve { get; set; }
         public int Cantidad { get; set; }
-        public float Pago { get; set; }
+        public double Pago { get; set; }
         public int IsActive { get; set; }
         public DateTime FechaCreacion { get; set; }
         public string CreadoPor { get; set; }
