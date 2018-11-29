@@ -4,7 +4,7 @@ using System.Text;
 
 namespace BE.CiS
 {
-    public class categoriaProveedor
+    public class CategoriaProducto
     {
         public int Id { get; set; }
         public string Nombre { get; set; }

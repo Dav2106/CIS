@@ -7,12 +7,12 @@ using System.Text;
 
 namespace DAC.CiS
 {
-    public class categoriaProveedorDAC
+    public class CategoriaProductoDAC
     {
         Conexion conn = new Conexion();
         ProjectLogger logs = new ProjectLogger();
 
-        public bool InsertarcategoriaProveedor(categoriaProveedor categoriaProveedor)
+        public bool InsertarCategoriaProducto(CategoriaProducto categoriaProducto)
         {
             bool flag = false;
             try
@@ -20,15 +20,15 @@ namespace DAC.CiS
                 using (conn.Connect())
                 {
                     MySqlCommand cmd = new MySqlCommand();
-                    cmd.CommandText = "InsertcategoriaProveedor";
+                    cmd.CommandText = "InsertCategoriaProducto";
                     cmd.CommandType = System.Data.CommandType.StoredProcedure;
-                    cmd.Parameters.AddWithValue("_nombre", categoriaProveedor.Nombre);
-                    cmd.Parameters.AddWithValue("_descripcion", categoriaProveedor.Descripcion);
-                    cmd.Parameters.AddWithValue("_fechaCreacion", categoriaProveedor.FechaCreacion);
-                    cmd.Parameters.AddWithValue("_creadoPor", categoriaProveedor.CreadoPor);
-                    cmd.Parameters.AddWithValue("_fechaActualizacion", categoriaProveedor.FechaActualizacion);
-                    cmd.Parameters.AddWithValue("_actualizadoPor", categoriaProveedor.ActualizadoPor);
-                    cmd.Parameters.AddWithValue("_isActive", categoriaProveedor.IsActive);
+                    cmd.Parameters.AddWithValue("_nombre", categoriaProducto.Nombre);
+                    cmd.Parameters.AddWithValue("_descripcion", categoriaProducto.Descripcion);
+                    cmd.Parameters.AddWithValue("_fechaCreacion", categoriaProducto.FechaCreacion);
+                    cmd.Parameters.AddWithValue("_creadoPor", categoriaProducto.CreadoPor);
+                    cmd.Parameters.AddWithValue("_fechaActualizacion", categoriaProducto.FechaActualizacion);
+                    cmd.Parameters.AddWithValue("_actualizadoPor", categoriaProducto.ActualizadoPor);
+                    cmd.Parameters.AddWithValue("_isActive", categoriaProducto.IsActive);
                     if (cmd.ExecuteNonQuery() > 0)
                         flag = true;
                     else
@@ -37,16 +37,16 @@ namespace DAC.CiS
             }
             catch (MySqlException mysqlEx)
             {
-                logs.LogExceptionDB(conn.Connect(), mysqlEx, "InsertarcategoriaProveedor", UserSettings.User);
+                logs.LogExceptionDB(conn.Connect(), mysqlEx, "InsertarCategoriaProducto", UserSettings.User);
             }
             catch (Exception ex)
             {
-                logs.LogExceptionDB(conn.Connect(), ex, "InsertarcategoriaProveedor", UserSettings.User);
+                logs.LogExceptionDB(conn.Connect(), ex, "InsertarCategoriaProducto", UserSettings.User);
             }
             return flag;
         }
 
-        public bool ActualizarcategoriaProveedor(categoriaProveedor categoriaProveedor)
+        public bool ActualizarCategoriaProducto(CategoriaProducto categoriaProducto)
         {
             bool flag = false;
             try
@@ -54,15 +54,14 @@ namespace DAC.CiS
                 using (conn.Connect())
                 {
                     MySqlCommand cmd = new MySqlCommand();
-                    cmd.CommandText = "UpdatecategoriaProveedor";
+                    cmd.CommandText = "UpdateCategoriaProducto";
                     cmd.CommandType = System.Data.CommandType.StoredProcedure;
-                    cmd.Parameters.AddWithValue("_id", categoriaProveedor.Id);
-                    cmd.CommandType = System.Data.CommandType.StoredProcedure;
-                    cmd.Parameters.AddWithValue("_nombre", categoriaProveedor.Nombre);
-                    cmd.Parameters.AddWithValue("_descripcion", categoriaProveedor.Descripcion);
-                    cmd.Parameters.AddWithValue("_fechaActualizacion", categoriaProveedor.FechaActualizacion);
-                    cmd.Parameters.AddWithValue("_actualizadoPor", categoriaProveedor.ActualizadoPor);
-                    cmd.Parameters.AddWithValue("_isActive", categoriaProveedor.IsActive);
+                    cmd.Parameters.AddWithValue("_id", categoriaProducto.Id);
+                    cmd.Parameters.AddWithValue("_nombre", categoriaProducto.Nombre);
+                    cmd.Parameters.AddWithValue("_descripcion", categoriaProducto.Descripcion);
+                    cmd.Parameters.AddWithValue("_fechaActualizacion", categoriaProducto.FechaActualizacion);
+                    cmd.Parameters.AddWithValue("_actualizadoPor", categoriaProducto.ActualizadoPor);
+                    cmd.Parameters.AddWithValue("_isActive", categoriaProducto.IsActive);
                     if (cmd.ExecuteNonQuery() > 0)
                         flag = true;
                     else
@@ -71,24 +70,24 @@ namespace DAC.CiS
             }
             catch (MySqlException mysqlEx)
             {
-                logs.LogExceptionDB(conn.Connect(), mysqlEx, "ActualizarcategoriaProveedor", UserSettings.User);
+                logs.LogExceptionDB(conn.Connect(), mysqlEx, "ActualizarCategoriaProducto", UserSettings.User);
             }
             catch (Exception ex)
             {
-                logs.LogExceptionDB(conn.Connect(), ex, "ActualizarcategoriaProveedor", UserSettings.User);
+                logs.LogExceptionDB(conn.Connect(), ex, "ActualizarCategoriaProducto", UserSettings.User);
             }
             return flag;
         }
 
-        public categoriaProveedor GetcategoriaProveedor(int id)
+        public CategoriaProducto GetCategoriaProducto(int id)
         {
-            categoriaProveedor categoriaProveedor = new categoriaProveedor();
+            CategoriaProducto categoriaProducto = new CategoriaProducto();
             try
             {
                 using (conn.Connect())
                 {
                     MySqlCommand cmd = new MySqlCommand();
-                    cmd.CommandText = "GetcategoriaProveedor";
+                    cmd.CommandText = "GetCategoriaProducto";
                     cmd.CommandType = System.Data.CommandType.StoredProcedure;
                     cmd.Parameters.AddWithValue("_id", id);
                     MySqlDataReader reader = cmd.ExecuteReader();
@@ -96,10 +95,10 @@ namespace DAC.CiS
                     {
                         while (reader.Read())
                         {
-                            categoriaProveedor.Id = Convert.ToInt16(reader["id"]);
-                            categoriaProveedor.Nombre = reader["nombre"].ToString();
-                            categoriaProveedor.Descripcion = reader["descripcion"].ToString();
-                            categoriaProveedor.IsActive = Convert.ToInt16(reader["isActive"]);                            
+                            categoriaProducto.Id = Convert.ToInt16(reader["id"]);
+                            categoriaProducto.Nombre = reader["nombre"].ToString();
+                            categoriaProducto.Descripcion = reader["descripcion"].ToString();
+                            categoriaProducto.IsActive = Convert.ToInt16(reader["isActive"]);                            
                         }
                     }
                 }
@@ -112,12 +111,12 @@ namespace DAC.CiS
             {
                 logs.LogExceptionDB(conn.Connect(), ex, "GetcategoriaProveedor", UserSettings.User);
             }
-            return categoriaProveedor;
+            return categoriaProducto;
         }
 
-        public List<categoriaProveedor> GetCategoriasProducto()
+        public List<CategoriaProducto> GetCategoriasProducto()
         {
-            List<categoriaProveedor> list = new List<categoriaProveedor>();
+            List<CategoriaProducto> list = new List<CategoriaProducto>();
             try
             {
                 using (conn.Connect())
@@ -131,7 +130,7 @@ namespace DAC.CiS
 
                         while (reader.Read())
                         {
-                            list.Add(new categoriaProveedor
+                            list.Add(new CategoriaProducto
                             {
                                 Id = Convert.ToInt16(reader["id"]),
                                 Nombre = reader["nombre"].ToString(),
