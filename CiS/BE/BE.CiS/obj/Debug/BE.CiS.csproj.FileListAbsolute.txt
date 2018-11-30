@@ -1,0 +1,5 @@
+D:\CIS\CiS\BE\BE.CiS\bin\Debug\BE.CiS.dll
+D:\CIS\CiS\BE\BE.CiS\bin\Debug\BE.CiS.pdb
+D:\CIS\CiS\BE\BE.CiS\obj\Debug\BE.CiS.csproj.CoreCompileInputs.cache
+D:\CIS\CiS\BE\BE.CiS\obj\Debug\BE.CiS.dll
+D:\CIS\CiS\BE\BE.CiS\obj\Debug\BE.CiS.pdb

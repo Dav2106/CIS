@@ -1,0 +1,6 @@
+D:\CIS\CiS\REST\WCF.CiS\obj\Debug\WCF.CiS.csproj.CoreCompileInputs.cache
+D:\CIS\CiS\REST\WCF.CiS\bin\WCF.CiS.dll.config
+D:\CIS\CiS\REST\WCF.CiS\bin\WCF.CiS.dll
+D:\CIS\CiS\REST\WCF.CiS\bin\WCF.CiS.pdb
+D:\CIS\CiS\REST\WCF.CiS\obj\Debug\WCF.CiS.dll
+D:\CIS\CiS\REST\WCF.CiS\obj\Debug\WCF.CiS.pdb

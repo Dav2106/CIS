@@ -1,0 +1,12 @@
+D:\CIS\CiS\DAC\DAC.CiS\obj\Debug\DAC.CiS.csprojAssemblyReference.cache
+D:\CIS\CiS\DAC\DAC.CiS\obj\Debug\DAC.CiS.csproj.CoreCompileInputs.cache
+D:\CIS\CiS\DAC\DAC.CiS\bin\Debug\DAC.CiS.dll
+D:\CIS\CiS\DAC\DAC.CiS\bin\Debug\DAC.CiS.pdb
+D:\CIS\CiS\DAC\DAC.CiS\bin\Debug\BE.CiS.dll
+D:\CIS\CiS\DAC\DAC.CiS\bin\Debug\Logger.CiS.dll
+D:\CIS\CiS\DAC\DAC.CiS\bin\Debug\MySql.Data.dll
+D:\CIS\CiS\DAC\DAC.CiS\bin\Debug\BE.CiS.pdb
+D:\CIS\CiS\DAC\DAC.CiS\bin\Debug\Logger.CiS.pdb
+D:\CIS\CiS\DAC\DAC.CiS\obj\Debug\DAC.CiS.csproj.CopyComplete
+D:\CIS\CiS\DAC\DAC.CiS\obj\Debug\DAC.CiS.dll
+D:\CIS\CiS\DAC\DAC.CiS\obj\Debug\DAC.CiS.pdb
