@@ -11,3 +11,15 @@ D:\CIS\CiS\Logger\Logger.CiS\obj\Debug\netstandard2.0\Logger.CiS.dll
 D:\CIS\CiS\Logger\Logger.CiS\obj\Debug\netstandard2.0\Logger.CiS.pdb
 D:\CIS\CiS\Logger\Logger.CiS\bin\Debug\netstandard2.0\BE.CiS.dll
 D:\CIS\CiS\Logger\Logger.CiS\bin\Debug\netstandard2.0\BE.CiS.pdb
+C:\proyectoDavid\CIS\CiS\Logger\Logger.CiS\bin\Debug\netstandard2.0\Logger.CiS.deps.json
+C:\proyectoDavid\CIS\CiS\Logger\Logger.CiS\bin\Debug\netstandard2.0\Logger.CiS.dll
+C:\proyectoDavid\CIS\CiS\Logger\Logger.CiS\bin\Debug\netstandard2.0\Logger.CiS.pdb
+C:\proyectoDavid\CIS\CiS\Logger\Logger.CiS\bin\Debug\netstandard2.0\BE.CiS.dll
+C:\proyectoDavid\CIS\CiS\Logger\Logger.CiS\bin\Debug\netstandard2.0\BE.CiS.pdb
+C:\proyectoDavid\CIS\CiS\Logger\Logger.CiS\obj\Debug\netstandard2.0\Logger.CiS.csprojAssemblyReference.cache
+C:\proyectoDavid\CIS\CiS\Logger\Logger.CiS\obj\Debug\netstandard2.0\Logger.CiS.csproj.CoreCompileInputs.cache
+C:\proyectoDavid\CIS\CiS\Logger\Logger.CiS\obj\Debug\netstandard2.0\Logger.CiS.AssemblyInfoInputs.cache
+C:\proyectoDavid\CIS\CiS\Logger\Logger.CiS\obj\Debug\netstandard2.0\Logger.CiS.AssemblyInfo.cs
+C:\proyectoDavid\CIS\CiS\Logger\Logger.CiS\obj\Debug\netstandard2.0\Logger.CiS.csproj.CopyComplete
+C:\proyectoDavid\CIS\CiS\Logger\Logger.CiS\obj\Debug\netstandard2.0\Logger.CiS.dll
+C:\proyectoDavid\CIS\CiS\Logger\Logger.CiS\obj\Debug\netstandard2.0\Logger.CiS.pdb

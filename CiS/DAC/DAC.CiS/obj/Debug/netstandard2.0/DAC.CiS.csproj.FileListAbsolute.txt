@@ -13,3 +13,17 @@ D:\CIS\CiS\DAC\DAC.CiS\obj\Debug\netstandard2.0\DAC.CiS.dll
 D:\CIS\CiS\DAC\DAC.CiS\obj\Debug\netstandard2.0\DAC.CiS.pdb
 D:\CIS\CiS\DAC\DAC.CiS\bin\Debug\netstandard2.0\Logger.CiS.dll
 D:\CIS\CiS\DAC\DAC.CiS\bin\Debug\netstandard2.0\Logger.CiS.pdb
+C:\proyectoDavid\CIS\CiS\DAC\DAC.CiS\bin\Debug\netstandard2.0\DAC.CiS.deps.json
+C:\proyectoDavid\CIS\CiS\DAC\DAC.CiS\bin\Debug\netstandard2.0\DAC.CiS.dll
+C:\proyectoDavid\CIS\CiS\DAC\DAC.CiS\bin\Debug\netstandard2.0\DAC.CiS.pdb
+C:\proyectoDavid\CIS\CiS\DAC\DAC.CiS\bin\Debug\netstandard2.0\BE.CiS.dll
+C:\proyectoDavid\CIS\CiS\DAC\DAC.CiS\bin\Debug\netstandard2.0\Logger.CiS.dll
+C:\proyectoDavid\CIS\CiS\DAC\DAC.CiS\bin\Debug\netstandard2.0\BE.CiS.pdb
+C:\proyectoDavid\CIS\CiS\DAC\DAC.CiS\bin\Debug\netstandard2.0\Logger.CiS.pdb
+C:\proyectoDavid\CIS\CiS\DAC\DAC.CiS\obj\Debug\netstandard2.0\DAC.CiS.csprojAssemblyReference.cache
+C:\proyectoDavid\CIS\CiS\DAC\DAC.CiS\obj\Debug\netstandard2.0\DAC.CiS.csproj.CoreCompileInputs.cache
+C:\proyectoDavid\CIS\CiS\DAC\DAC.CiS\obj\Debug\netstandard2.0\DAC.CiS.AssemblyInfoInputs.cache
+C:\proyectoDavid\CIS\CiS\DAC\DAC.CiS\obj\Debug\netstandard2.0\DAC.CiS.AssemblyInfo.cs
+C:\proyectoDavid\CIS\CiS\DAC\DAC.CiS\obj\Debug\netstandard2.0\DAC.CiS.csproj.CopyComplete
+C:\proyectoDavid\CIS\CiS\DAC\DAC.CiS\obj\Debug\netstandard2.0\DAC.CiS.dll
+C:\proyectoDavid\CIS\CiS\DAC\DAC.CiS\obj\Debug\netstandard2.0\DAC.CiS.pdb
