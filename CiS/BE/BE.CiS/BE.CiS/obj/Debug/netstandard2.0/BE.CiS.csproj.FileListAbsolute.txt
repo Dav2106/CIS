@@ -14,3 +14,4 @@ C:\proyectoDavid\CIS\CiS\BE\BE.CiS\BE.CiS\obj\Debug\netstandard2.0\BE.CiS.Assemb
 C:\proyectoDavid\CIS\CiS\BE\BE.CiS\BE.CiS\obj\Debug\netstandard2.0\BE.CiS.AssemblyInfo.cs
 C:\proyectoDavid\CIS\CiS\BE\BE.CiS\BE.CiS\obj\Debug\netstandard2.0\BE.CiS.dll
 C:\proyectoDavid\CIS\CiS\BE\BE.CiS\BE.CiS\obj\Debug\netstandard2.0\BE.CiS.pdb
+C:\proyectoDavid\CIS\CiS\BE\BE.CiS\BE.CiS\obj\Debug\netstandard2.0\BE.CiS.csprojAssemblyReference.cache
