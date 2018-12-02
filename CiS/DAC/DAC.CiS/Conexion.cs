@@ -13,7 +13,7 @@ namespace DAC.CiS
         MySqlConnection conn;
         ProjectLogger logs = new ProjectLogger();
 
-        string connectionString = "Data Source=localhost:3306;Database=cis;Uid=root;Pwd=$1Q2W3e4r$";
+        string connectionString = "Data Source=localhost:3306;Database=cis;Uid=root;Pwd=1234";
 
         public Conexion()
         {
