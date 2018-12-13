@@ -1,0 +1,2 @@
+C:\Users\Luis\Documents\ProyectoPrestamo\Prestamos\DAC.Prestamos\obj\Debug\DAC.Prestamos.csprojAssemblyReference.cache
+C:\Users\Luis\Documents\ProyectoPrestamo\Prestamos\DAC.Prestamos\obj\Debug\DAC.Prestamos.csproj.CoreCompileInputs.cache

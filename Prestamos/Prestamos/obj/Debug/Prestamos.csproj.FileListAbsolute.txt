@@ -1,0 +1,17 @@
+C:\Users\Luis\Documents\ProyectoPrestamo\Prestamos\Prestamos\bin\Debug\Prestamos.exe.config
+C:\Users\Luis\Documents\ProyectoPrestamo\Prestamos\Prestamos\bin\Debug\Prestamos.exe
+C:\Users\Luis\Documents\ProyectoPrestamo\Prestamos\Prestamos\bin\Debug\Prestamos.pdb
+C:\Users\Luis\Documents\ProyectoPrestamo\Prestamos\Prestamos\obj\Debug\Prestamos.csprojAssemblyReference.cache
+C:\Users\Luis\Documents\ProyectoPrestamo\Prestamos\Prestamos\obj\Debug\MainWindow.g.cs
+C:\Users\Luis\Documents\ProyectoPrestamo\Prestamos\Prestamos\obj\Debug\App.g.cs
+C:\Users\Luis\Documents\ProyectoPrestamo\Prestamos\Prestamos\obj\Debug\Prestamos_MarkupCompile.cache
+C:\Users\Luis\Documents\ProyectoPrestamo\Prestamos\Prestamos\obj\Debug\Prestamos_MarkupCompile.lref
+C:\Users\Luis\Documents\ProyectoPrestamo\Prestamos\Prestamos\obj\Debug\MainWindow.baml
+C:\Users\Luis\Documents\ProyectoPrestamo\Prestamos\Prestamos\obj\Debug\Prestamos.g.resources
+C:\Users\Luis\Documents\ProyectoPrestamo\Prestamos\Prestamos\obj\Debug\Prestamos.Properties.Resources.resources
+C:\Users\Luis\Documents\ProyectoPrestamo\Prestamos\Prestamos\obj\Debug\Prestamos.csproj.GenerateResource.cache
+C:\Users\Luis\Documents\ProyectoPrestamo\Prestamos\Prestamos\obj\Debug\Prestamos.csproj.CoreCompileInputs.cache
+C:\Users\Luis\Documents\ProyectoPrestamo\Prestamos\Prestamos\obj\Debug\Prestamos.exe
+C:\Users\Luis\Documents\ProyectoPrestamo\Prestamos\Prestamos\obj\Debug\Prestamos.pdb
+C:\Users\Luis\Documents\ProyectoPrestamo\Prestamos\Prestamos\obj\Debug\Window2.g.cs
+C:\Users\Luis\Documents\ProyectoPrestamo\Prestamos\Prestamos\obj\Debug\Window2.baml

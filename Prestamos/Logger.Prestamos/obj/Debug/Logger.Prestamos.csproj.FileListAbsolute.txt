@@ -1,0 +1,3 @@
+C:\Users\Luis\Documents\ProyectoPrestamo\Prestamos\Logger.Prestamos\obj\Debug\Logger.Prestamos.csprojAssemblyReference.cache
+C:\Users\Luis\Documents\ProyectoPrestamo\Prestamos\Logger.Prestamos\obj\Debug\Logger.Prestamos.exe.config
+C:\Users\Luis\Documents\ProyectoPrestamo\Prestamos\Logger.Prestamos\obj\Debug\Logger.Prestamos.csproj.CoreCompileInputs.cache
